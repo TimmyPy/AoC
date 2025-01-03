@@ -8,7 +8,7 @@ fn read_input() -> Vec<String> {
         .collect()
 }
 
-pub fn solution_day2_part1() -> u32 {
+pub fn solution_part1() -> u32 {
     let mut ans: u32 = 0;
     let input = read_input();
     for line in input {

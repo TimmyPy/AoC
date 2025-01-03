@@ -1,5 +1,12 @@
+use std::fs;
 
-pub fn day1_task_p1(input: &str) -> i32 {
+fn read_input() -> String {
+    fs::read_to_string("src/inputs/day1.txt").unwrap()
+
+}
+
+pub fn solution_part1() -> i32 {
+    let input = read_input();
     let mut ans: i32 = 0;
 
     for c in input.chars() {
@@ -17,8 +24,9 @@ pub fn day1_task_p1(input: &str) -> i32 {
     ans
 }
 
-pub fn day1_task_p2(input: &str) -> i32 {
+pub fn solution_part2() -> i32 {
     let mut floor: i32 = 0;
+    let input = read_input();
 
     for (i, c) in input.chars().enumerate() {
         if c == '(' {
