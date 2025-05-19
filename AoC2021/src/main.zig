@@ -1,4 +1,8 @@
+const std = @import("std");
+
 const day1 = @import("solutions/day1.zig");
+const day2 = @import("solutions/day2.zig");
+
 pub fn main() !void {
     // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
 
@@ -9,12 +13,21 @@ pub fn main() !void {
     var bw = std.io.bufferedWriter(stdout_file);
     const stdout = bw.writer();
 
+    // day1
     const day1_ans: u16 = try day1.solution1();
     try stdout.print("Solution day 1: {}", .{day1_ans});
-    try bw.flush(); // Don't forget to flush!
-}
+    const day1_part2_ans: u16 = try day1.solution2();
+    try stdout.print("Solution day 1 part 2: {}", .{day1_part2_ans});
 
-const std = @import("std");
+    // day2
+    const day2_part1: u16 = try day2.part1();
+    try stdout.print("Solution day 1: {}", .{day2_part1});
+    const day2_part2: u16 = try day2.part2();
+    try stdout.print("Solution day 1 part 2: {}", .{day2_part2});
+
+    try bw.flush(); // Don't forget to flush!
+
+}
 
 /// This imports the separate module containing `root.zig`. Take a look in `build.zig` for details.
 const lib = @import("AoC2021_lib");
