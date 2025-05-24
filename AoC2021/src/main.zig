@@ -15,15 +15,15 @@ pub fn main() !void {
 
     // day1
     const day1_ans: u16 = try day1.solution1();
-    try stdout.print("Solution day 1: {}", .{day1_ans});
+    try stdout.print("Solution day 1: {}\n", .{day1_ans});
     const day1_part2_ans: u16 = try day1.solution2();
-    try stdout.print("Solution day 1 part 2: {}", .{day1_part2_ans});
+    try stdout.print("Solution day 1 part 2: {}\n", .{day1_part2_ans});
 
     // day2
-    const day2_part1: u16 = try day2.part1();
-    try stdout.print("Solution day 1: {}", .{day2_part1});
-    const day2_part2: u16 = try day2.part2();
-    try stdout.print("Solution day 1 part 2: {}", .{day2_part2});
+    const day2_part1: u64 = try day2.part1();
+    try stdout.print("Solution day 2: {}\n", .{day2_part1});
+    const day2_part2: u64 = try day2.part2();
+    try stdout.print("Solution day 2 part 2: {}\n", .{day2_part2});
 
     try bw.flush(); // Don't forget to flush!
 
